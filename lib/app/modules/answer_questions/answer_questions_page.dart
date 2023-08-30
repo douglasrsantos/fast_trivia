@@ -155,6 +155,7 @@ class _AnswerQuestionsPageState extends State<AnswerQuestionsPage> {
                                     alternativeId:
                                         questions?.alternatives?[index].id ?? 0,
                                   );
+                                  setState(() {});
                                 },
                               );
                             },
@@ -164,7 +165,7 @@ class _AnswerQuestionsPageState extends State<AnswerQuestionsPage> {
                     );
                   },
                 ),
-              )
+              ),
             ],
           );
         }),

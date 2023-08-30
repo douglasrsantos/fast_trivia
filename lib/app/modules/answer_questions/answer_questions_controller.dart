@@ -120,7 +120,8 @@ abstract class _AnswerQuestionsControllerBase with Store {
   verifyIsCorrect() {
     if (questionnaireModel!.questions != null) {
       for (var key in questionnaireModel!.questions!) {
-        if (chosenAlternatives['${key.id}'] == key.answerKey) {
+        final response = chosenAlternatives[key.id];
+        if (response == key.answerKey) {
           correctAnswers++;
           if (correctAnswers > questionnaireModel!.questions!.length) {
             correctAnswers = questionnaireModel!.questions!.length;
